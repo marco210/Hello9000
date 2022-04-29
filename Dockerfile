@@ -12,6 +12,6 @@ COPY *.go ./
 
 RUN go build -o /Hello9000
 
-EXPOSE 8080
+EXPOSE 9000
 
 CMD [ "/Hello9000" ]
