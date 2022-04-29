@@ -1,6 +1,6 @@
-FROM
-Learn more about the "FROM" Dockerfile command.
- golang:1.17-alpine
+FROM golang:1.17-alpine
+#Learn more about the "FROM" Dockerfile command.
+# golang:1.17-alpine
 
 WORKDIR /cmd
 
