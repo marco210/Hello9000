@@ -4,12 +4,8 @@ FROM golang:1.17-alpine
 
 WORKDIR /cmd
 
-COPY go.mod ./
-COPY go.sum ./
-RUN go mod download
+COPY go.mod go.sum ./
 RUN go mod tidy
-
-COPY *.go ./
 
 RUN go build -o /Hello9000
 
