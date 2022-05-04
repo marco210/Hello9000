@@ -1,0 +1,24 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  creationTimestamp: null
+  generateName: golang-pipeline-run-
+  namespace: default
+spec:
+  params:
+  - name: git_url
+    value: https://github.com/marco210/Hello9000
+  - name: imageTag
+    value: v1
+  - name: imageUrl
+    value: marco210/pipedemo
+  pipelineRef:
+    name: golang-pipeline
+  workspaces:
+  - name: kubegen-ws
+    persistentVolumeClaim:
+      claimName: tekton-pvc
+  - name: docker-reg-creds
+    secret:
+      secretName: docker-creds
+status: {}
