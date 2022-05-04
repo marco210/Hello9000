@@ -5,6 +5,7 @@ FROM golang:1.17-alpine
 WORKDIR /cmd
 
 COPY go.mod go.sum ./
+COPY cmd/main.go ./
 RUN go mod download && go mod tidy
 
 RUN go build -o /Hello9000
