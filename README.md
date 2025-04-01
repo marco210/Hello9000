@@ -11,4 +11,5 @@ sequenceDiagram
     kubectl-->>+Cluster: create paused cluster-name
     kubectl-->>+OpenStackCluster: create cluster-name
     kubectl-->>+Cluster: unpause cluster-name
+    Secrets-->>+nghianv: unpause cluster-name
 ```
